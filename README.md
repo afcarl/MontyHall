@@ -5,6 +5,8 @@ a simulation of the Monthy Hall problem, in Python. Maybe I should name this rep
 ```
 ./experiment.py
 ```
+##Results (for simulation with 3 doors):
+![alt tag](https://github.com/nihit/MontyHall/blob/master/results/plot.png)
 
 ##Useful references: 
 * Wikipedia entry: http://en.wikipedia.org/wiki/Monty_Hall_problem.
