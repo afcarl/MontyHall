@@ -6,7 +6,7 @@ You are on a game show and have to choose one among three doors. Behind one is a
 
 ##To run the code:
 ```
-./experiment.py
+src/experiment.py
 ```
 (you can edit the experiment parameters defined in experiment.py if you want to change the number of iterations or number of doors)
 
