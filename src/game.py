@@ -32,7 +32,9 @@ class Game:
 		self.doors[chosen_door_index].is_chosen = True
 
 		#step3: host opens all doors except two: door with the car and the door chosen by contestant
-		doors_not_to_open = {car_door_index, chosen_door_index}	
+		doors_not_to_open = set()
+		doors_not_to_open.add(car_door_index)
+		doors_not_to_open.add(chosen_door_index)	
 		additional_door_not_to_open = -1
 		#but in case both are the same, randomly selected another door which will not be opened	
 		if car_door_index == chosen_door_index:
