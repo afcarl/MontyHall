@@ -1,8 +1,7 @@
 #!/usr/bin/env python
-from game import Game
+import argparse
 
-NUM_DOORS = 3
-NUM_ITERATIONS = 10000
+from game import Game
 
 class Experiment:
 	def __init__(self, num_iterations, num_doors):
@@ -22,9 +21,15 @@ class Experiment:
 			self.num_wins_switch += int(is_switching_win)
 		return (self.num_wins_stay, self.num_wins_switch)
 
-def main():
-	experiment = Experiment(NUM_ITERATIONS, NUM_DOORS)
+def main(num_iterations, num_doors):
+	experiment = Experiment(num_iterations, num_doors)
 	print experiment.run_experiment()
 
 if __name__ == '__main__':
-	main()
+	parser = argparse.ArgumentParser(description="Run a Monty Hall experiment.")
+	parser.add_argument("-i", action="store", dest="num_iterations", default=10000,
+		type=int, help="The number of iterations. Default is 10000.")
+	parser.add_argument("-d", action="store", dest="num_doors", default=3,
+		type=int, help="The number of doors. Default is 3.")
+	args = parser.parse_args()
+	main(args.num_iterations, args.num_doors)

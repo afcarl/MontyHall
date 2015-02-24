@@ -8,7 +8,17 @@ You are on a game show and have to choose one among three doors. Behind one is a
 ```
 src/experiment.py
 ```
-(you can edit the experiment parameters defined in experiment.py if you want to change the number of iterations or number of doors)
+To edit the experiment parameters you can run -
+```
+src/experiment.py -i <NUM_ITERATIONS> -d <NUM_DOORS>
+```
+
+For example -
+```
+src/experiment.py -i 1000 -d 4
+```
+
+Both parameters are optional and default to 10000 iterations and 3 doors.
 
 ##Results (for simulation with 3 doors):
 ![alt tag](https://github.com/nihit/MontyHall/blob/master/results/plot.png)
